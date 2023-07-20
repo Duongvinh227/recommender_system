@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Movie Recommender System</title>
+</head>
+<body>
+    <h1>Welcome to the Movie Recommender System</h1>
+    <form action="/recommend" method="post">
+        <label for="movie_name">Enter a movie name:</label>
+<!--        <input type="text" id="movie_name" name="movie_name" value="Transformers: Rise of the Beasts" size="35">-->
+
+         <select id="movie_name" name="movie_name">
+            {% for title in movie_titles %}
+                <option value="{{ title }}">{{ title }}</option>
+            {% endfor %}
+        </select>
+
+        <br>
+        <label for="top_movie">Number of top recommended movies (1-10):</label>
+        <input type="number" id="top_movie" name="top_movie" value="2" min="1" max="10">
+        <br>
+        <input type="submit" value="submit">
+    </form>
+</body>
+</html>
+

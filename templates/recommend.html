@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Movie Recommendations</title>
+</head>
+<body>
+    <h1>Recommended Movies for {{movie_name}}</h1>
+    <ul>
+        {% for title ,overview in recommended_movies %}
+            <li>
+                <h2>{{ title }}</h2>
+                <p><strong>Description: </strong>  {{ overview }}</p>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
